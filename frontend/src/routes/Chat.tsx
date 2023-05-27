@@ -1,25 +1,23 @@
 import { useEffect, useState } from 'react'
 
-import Message from '../Components/Message'
-
 import { type message } from '../types'
+
 import messageArrToText from '../utils/messageArrToText'
-import { firstInteraction, respondToText } from '../services/openai'
+
 import {
   createUser,
   getUserInfo,
   updateUserInfo,
 } from '../services/backendService'
+import { firstInteraction, respondToText } from '../services/openai'
+
+import Message from '../Components/Message'
+import Loader from '../Components/Loader'
 
 function Chat() {
   const [inp, setInp] = useState('')
-  const [messages, setMessages] = useState<message[]>([
-    {
-      id: 1,
-      text: 'Olá, tudo bem?',
-      user: 'Bill',
-    },
-  ])
+  const [messages, setMessages] = useState<message[]>([])
+  const [userMessageSending, setUserMessageSending] = useState(false)
 
   useEffect(() => {
     ;(async () => {
@@ -29,7 +27,7 @@ function Chat() {
         const userInfo = await getUserInfo(uid)
 
         if (!userInfo) {
-          return console.log('user info went doo doo')
+          return console.log('could not get user info')
         }
 
         const response = await respondToText('', userInfo.data, true)
@@ -70,6 +68,8 @@ function Chat() {
         user: 'Cliente',
       },
     ]
+
+    setUserMessageSending(true)
 
     const uid = localStorage.getItem('uid')
 
@@ -126,7 +126,7 @@ function Chat() {
     }
 
     setMessages(newMessages)
-
+    setUserMessageSending(false)
     setInp('')
   }
 
@@ -157,7 +157,7 @@ function Chat() {
           placeholder="Digite aqui..."
         />
         <button className="rounded-lg border-2 border-gray-500 px-4 py-2">
-          Enviar
+          {userMessageSending ? <Loader /> : 'Enviar'}
         </button>
       </form>
 
