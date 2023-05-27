@@ -15,3 +15,15 @@ NutriBill tem como objetivo principal tornar a alimentação saudável e equilib
 - **Recomendações Nutricionais Personalizadas:** O assistente alimentar inteligente fornece recomendações nutricionais personalizadas, considerando as necessidades individuais de cada usuário, como idade, sexo, altura, peso e objetivos de saúde.
 - **Análise de Alimentos:** O NutriBill possui um banco de dados abrangente com informações nutricionais de alimentos comumente consumidos. Ele ajuda os usuários a entenderem o valor nutricional dos alimentos e a tomar decisões informadas sobre suas escolhas alimentares.
 - **Dicas e Orientações:** Além de fornecer recomendações nutricionais, o NutriBill oferece dicas e orientações úteis sobre hábitos alimentares saudáveis, incluindo informações sobre porções adequadas e balanceamento de nutrientes.
+
+# Tecnologias
+
+- **Front-end:**
+  - React
+  - TailWindCSS
+  - TypeScript
+
+- **Back-end:**
+  - NodeJS
+  - OpenAI API
+  - TypeScript
