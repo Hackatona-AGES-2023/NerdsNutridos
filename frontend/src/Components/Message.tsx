@@ -6,17 +6,17 @@ type MessageProps = {
 }
 
 const containerStyles: Record<sides, string> = {
-  left: 'bg-gray-100 justify-start',
-  right: 'bg-gray-200 justify-end',
+  left: 'justify-start',
+  right: 'justify-end',
 }
 
 const userStyles: Record<sides, string> = {
-  left: 'bg-emerald-800',
+  left: 'bg-emerald-900 font-bold',
   right: 'border-b-2 border-emerald-800 bg-emerald-400 text-black',
 }
 
 const textStyles: Record<sides, string> = {
-  left: 'bg-emerald-50',
+  left: 'bg-emerald-800 text-white',
   right: '',
 }
 

@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 
+import Bill from '../../public/LogoHorizontal.png'
+
 import { type message } from '../types'
 
 import messageArrToText from '../utils/messageArrToText'
@@ -132,7 +134,9 @@ function Chat() {
 
   return (
     <div className="m-auto grid h-full max-w-3xl grid-rows-[auto_1fr_auto_auto]">
-      <header className="bg-emerald-200 px-8 py-4">nutri bill</header>
+      <header className="mx-1 rounded-b-3xl border-2 border-t-0 border-gray-500">
+        <img src={Bill} alt="Logo" className="ml-4 h-20" />
+      </header>
 
       <div className="overflow-y-scroll scroll-smooth">
         {messages.map((message) => (
@@ -161,7 +165,7 @@ function Chat() {
         </button>
       </form>
 
-      <footer className="my-2 text-center text-emerald-800">
+      <footer className="my-2 text-center text-gray-500">
         &copy; 2023 NutriBill feito com amor 😻
       </footer>
     </div>

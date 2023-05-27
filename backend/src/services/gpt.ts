@@ -2,7 +2,7 @@ import { Configuration, OpenAIApi } from 'openai'
 import { getUserFromJson } from '../getUserFromJson'
 
 const configuration = new Configuration({
-  apiKey: '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',
+  apiKey: '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',
 })
 const openai = new OpenAIApi(configuration)
 
