@@ -18,6 +18,7 @@ NutriBill tem como objetivo principal tornar a alimentação saudável e equilib
 
 # Fluxograma
 Os dados da aplicação passam por um camninho semelhante a esse:
+[Link do arquivo](https://www.figma.com/file/5PGwkln6V2doMIARVay7XB/Fluxograma?type=whiteboard&node-id=717%3A274&t=UdJ2zonjzreSEmdM-1)
 
 ![Fluxograma](https://github.com/Hackatona-AGES-2023/NerdsNutridos/assets/79384667/68f17251-09f9-4f62-9105-cff6dbf85521)
 
