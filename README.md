@@ -27,3 +27,4 @@ NutriBill tem como objetivo principal tornar a alimentação saudável e equilib
   - NodeJS
   - OpenAI API
   - TypeScript
+  - Express
