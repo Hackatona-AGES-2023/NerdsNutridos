@@ -16,12 +16,20 @@ NutriBill tem como objetivo principal tornar a alimentação saudável e equilib
 - **Análise de Alimentos:** O NutriBill possui um banco de dados abrangente com informações nutricionais de alimentos comumente consumidos. Ele ajuda os usuários a entenderem o valor nutricional dos alimentos e a tomar decisões informadas sobre suas escolhas alimentares.
 - **Dicas e Orientações:** Além de fornecer recomendações nutricionais, o NutriBill oferece dicas e orientações úteis sobre hábitos alimentares saudáveis, incluindo informações sobre porções adequadas e balanceamento de nutrientes.
 
+# Fluxograma
+Os dados da aplicação passam por um camninho semelhante a esse:
+
+![Fluxograma](https://github.com/Hackatona-AGES-2023/NerdsNutridos/assets/79384667/68f17251-09f9-4f62-9105-cff6dbf85521)
+
+No primeiro acesso do usuário, o backend gera um ID único, que então é salvo no `localStorage` do navegador. Depois a IA entra e começa a fazer perguntas de uma maneira casual para conhecer melhor o usuário e dar o atendimento que ele precisa. A cada nova informação dita pelo usuário, a conversa é enviada para o backend e então é analisada por outra IA, que por sua vez condensa as informações do usuário e guarda elas num banco de dados, para que possam ser buscadas toda vez que o usuário entra na plataforma novamente. Isso garante uma memória de longo prazo para a IA, que pode oferecer recomendações coerentes mesmo após um longo tempo sem contato.
+
 # Tecnologias
 
 - **Front-end:**
   - React
-  - Tailwind
+  - TailwindCss
   - TypeScript
+  - OpenAI API
 
 - **Back-end:**
   - NodeJS
